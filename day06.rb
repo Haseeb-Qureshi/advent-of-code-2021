@@ -1,9 +1,9 @@
 # Part 1
 INPUT = File.read('data06.txt').chomp
-fish_timers = INPUT.split(',').map(&:to_i)
+raw_fish_timers = INPUT.split(',').map(&:to_i)
 
 timers = Array.new(9, 0)
-fish_timers.each { |timer| timers[timer] += 1 }
+raw_fish_timers.each { |timer| timers[timer] += 1 }
 
 def simulate_step(timers)
   zeroes = timers[0]
